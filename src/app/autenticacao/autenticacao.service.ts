@@ -4,14 +4,14 @@ import { Observable } from 'rxjs';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AutenticacaoService {
 
-  constructor(private HttpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   autenticar(usuario: string, senha: string): Observable<any> {
-    return this.HttpClient.post('http://localhost:3000/user/login', {
+    return this.httpClient.post('http://localhost:3000/user/login', {
       userName: usuario,
       password: senha,
     })
