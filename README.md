@@ -23,7 +23,8 @@
 
 ## :hammer: Funcionalidades do projeto
 
-- `Login` : 
+- `Home`: É um componente separado com o titulo e imagem da home
+- `Login` : É um componente que está dentro da home para o login do usuário
 
 ## 📁 Acesso ao projeto
 
