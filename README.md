@@ -24,7 +24,8 @@
 ## :hammer: Funcionalidades do projeto
 
 - `Home`: Imagem e formulário
-- `Login` : Validações de entrada, de usuario, de senha e tratamento de erros.
+- `Login` : Validações de entrada, de usuario, de senha e tratamento de erros
+- `Cadastro` : Componente para cadastro de usuários
 
 ## 📁 Acesso ao projeto
 
