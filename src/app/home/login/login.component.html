@@ -14,7 +14,8 @@
 
     <app-mensagem
     *ngIf="campoUsuario.invalid && campoUsuario.touched"
-    mensagem="Usuário obrigatório"></app-mensagem>
+    mensagem="Usuário obrigatório"
+    ></app-mensagem>
 
     <div class="form-group">
         <input
@@ -28,8 +29,18 @@
         >
         <app-mensagem
         *ngIf="campoSenha.invalid && campoSenha.touched"
-        mensagem="Senha obrigatória"></app-mensagem>
+        mensagem="Senha obrigatória"
+        ></app-mensagem>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Login</button>
+    <button 
+    type="submit" 
+    class="btn btn-primary btn-block" 
+    [disabled]="loginForm.invalid"
+    >Login</button>
 </form>
+
+<p>Não é um usuário?
+    <a [routerLink]="['novousuario']">
+    Cadastre-se!</a>
+</p>
