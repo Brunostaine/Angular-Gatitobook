@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -20,7 +20,8 @@ import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
     HomeRoutingModule,
     HttpClientModule,
     FormsModule,
-    MensagemModule, 
+    MensagemModule,
+    ReactiveFormsModule, 
   ],
   exports: [
     HomeComponent

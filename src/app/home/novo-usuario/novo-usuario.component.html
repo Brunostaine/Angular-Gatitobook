@@ -1,17 +1,29 @@
 <h4 class="text-center">Registre-se e mostre seu pet ao mundo!</h4>
 
-<form class="form mt-4">
+<form class="form mt-4" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
     <div class="form-group">
-        <input placeholder="e-mail" class="form-control"/>
+        <input
+         placeholder="e-mail" 
+         class="form-control" 
+         formControlName="email"/>
     </div>
     <div>
-        <input placeholder="Nome Completo" class="form-control"/>
+        <input 
+        placeholder="Nome Completo" 
+        class="form-control" 
+        formControlName="fullName"/>
     </div>
     <div>
-        <input placeholder="Usuário" class="form-control"/>
+        <input 
+        placeholder="Usuário" 
+        class="form-control" 
+        formControlName="userName"/>
     </div>
     <div>
-        <input placeholder="Senha" class="form-control"/>
+        <input 
+        placeholder="Senha" 
+        class="form-control" 
+        formControlName="password"/>
     </div>
 
     <button class="btn btn-primary btn-block">

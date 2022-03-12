@@ -5,11 +5,11 @@ import { NovoUsuario } from './novo-usuario';
 @Injectable({
   providedIn: 'root'
 })
-export class NovoUsuarioService {
 
+export class NovoUsuarioService {
   constructor(private http: HttpClient) { }
 
-  cadastrarNovoUsuario(NovoUsuario: NovoUsuario) {
-    return this.http.post('http://localhost:3000/user/signup', NovoUsuario)
+  cadastrarNovoUsuario(novoUsuario: NovoUsuario) {
+    return this.http.post('http://localhost:3000/user/signup', novoUsuario)
   }
 }
