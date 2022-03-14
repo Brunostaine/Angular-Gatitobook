@@ -57,10 +57,10 @@
 
             <app-mensagem
             *ngIf="
-                novoUsuarioForm.get('userName')?.errors?.['required'] &&
+                novoUsuarioForm.get('userName')?.errors?.['usuarioExistente'] &&
                 novoUsuarioForm.get('userName')?.touched
             "
-            mensagem="Informe o nome de usuário"
+            mensagem="Usuário ja existe"
             >
 
             </app-mensagem>

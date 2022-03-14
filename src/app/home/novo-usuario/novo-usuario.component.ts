@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { minusculoValidator } from './minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
 import { NovoUsuarioService } from './novo-usuario.service'; // não esta sendo usado por enquanto, fiz uma gambiarra para o código voltar. No app.modules adicionei o serviço NovoUsuarioService e importei ele tirando o erro provisóriamente
+import { UsuarioExisteService } from './usuario-existe.service';
 
 @Component({
   selector: 'app-novo-usuario',
@@ -15,13 +16,15 @@ export class NovoUsuarioComponent implements OnInit {
   constructor( 
     private formBuilder: FormBuilder, 
     private novoUsuarioService: NovoUsuarioService, // Não apagar
+    private usuarioExistenteService: UsuarioExisteService,
     ) { }
 
   ngOnInit(): void {
     this.novoUsuarioForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       fullName: ['', [Validators.required, Validators.minLength(4)]], 
-      userName: ['', [Validators.required, minusculoValidator]],
+      userName: ['', [minusculoValidator],
+      [this.usuarioExistenteService.usuarioJaExiste()]],
       password: [''],
     })
   }
