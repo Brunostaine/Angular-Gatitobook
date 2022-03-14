@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { minusculoValidator } from './minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
 import { NovoUsuarioService } from './novo-usuario.service'; // não esta sendo usado por enquanto, fiz uma gambiarra para o código voltar. No app.modules adicionei o serviço NovoUsuarioService e importei ele tirando o erro provisóriamente
@@ -18,6 +19,7 @@ export class NovoUsuarioComponent implements OnInit {
     private formBuilder: FormBuilder, 
     private novoUsuarioService: NovoUsuarioService, // Não apagar
     private usuarioExistenteService: UsuarioExisteService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -41,7 +43,16 @@ export class NovoUsuarioComponent implements OnInit {
 
 
   cadastrar() {
-    const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario;// Ficar de olho aqui
-    console.log(novoUsuario)
+    if (this.novoUsuarioForm.valid) {
+      const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario;
+      this.novoUsuarioService.cadastrarNovoUsuario(novoUsuario).subscribe(
+        () => {
+          this.router.navigate(['']);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
   }
 }
