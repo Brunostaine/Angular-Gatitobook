@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NovoUsuarioService } from './home/novo-usuario/novo-usuario.service';
+import { UsuarioExisteService } from './home/novo-usuario/usuario-existe.service';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NovoUsuarioService } from './home/novo-usuario/novo-usuario.service';
     HttpClientModule
   ],
   providers: [
-    NovoUsuarioService
+    NovoUsuarioService,
+    
   ],
   bootstrap: [AppComponent]
 })
