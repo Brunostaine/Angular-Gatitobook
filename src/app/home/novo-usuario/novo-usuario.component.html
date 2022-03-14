@@ -7,22 +7,22 @@
          class="form-control" 
          formControlName="email"/>
 
-        <app-mensagem
-            *ngIf="
-                novoUsuarioForm.get('email')?.errors?.['required'] &&
-                novoUsuarioForm.get('email')?.touched
-            "
-             mensagem="E-mail obrigatório" 
-        >
-        </app-mensagem>
-        <app-mensagem
-            *ngIf="
-                novoUsuarioForm.get('email')?.errors?.['email'] &&
-                novoUsuarioForm.get('email')?.touched
-            "
-            mensagem="E-mail no formato incorreto"
-        >
-        </app-mensagem>
+            <app-mensagem
+                *ngIf="
+                    novoUsuarioForm.get('email')?.errors?.['required'] &&
+                    novoUsuarioForm.get('email')?.touched
+                "
+                mensagem="E-mail obrigatório" 
+            >
+            </app-mensagem>
+            <app-mensagem
+                *ngIf="
+                    novoUsuarioForm.get('email')?.errors?.['email'] &&
+                    novoUsuarioForm.get('email')?.touched
+                "
+                mensagem="E-mail no formato incorreto"
+            >
+            </app-mensagem>
     </div>
     <div>
         <input 
@@ -30,21 +30,40 @@
         class="form-control" 
         formControlName="fullName"/>
 
-        <app-mensagem
+            <app-mensagem
 
-        *ngIf="
-            novoUsuarioForm.get('fullName')?.errors &&
-            novoUsuarioForm.get('fullName')?.touched
-        "
-        mensagem="Nome incorreto"
-        >
-        </app-mensagem>
+            *ngIf="
+                novoUsuarioForm.get('fullName')?.errors &&
+                novoUsuarioForm.get('fullName')?.touched
+            "
+            mensagem="Nome incorreto"
+            >
+            </app-mensagem>
     </div>
     <div>
         <input 
         placeholder="Usuário" 
         class="form-control" 
         formControlName="userName"/>
+
+            <app-mensagem
+            *ngIf="
+            novoUsuarioForm.get('userName')?.errors?.['minusculo'] &&
+            novoUsuarioForm.get('userName')?.touched
+            "
+            mensagem="Usuário deve ser em letra minuscula"
+            >
+            </app-mensagem>
+
+            <app-mensagem
+            *ngIf="
+                novoUsuarioForm.get('userName')?.errors?.['required'] &&
+                novoUsuarioForm.get('userName')?.touched
+            "
+            mensagem="Informe o nome de usuário"
+            >
+
+            </app-mensagem>
     </div>
     <div>
         <input 
