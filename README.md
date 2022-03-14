@@ -30,7 +30,7 @@
 ## 📁 Acesso ao projeto
 
 **Acesso ao código do projeto**<br>
-
+https://github.com/Brunostaine/Angular-Gatitobook
 
 **🛠️ Abrir e rodar o projeto**<br>
 
