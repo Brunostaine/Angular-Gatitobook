@@ -7,16 +7,24 @@ import { AppComponent } from './app.component';
 
 import { NovoUsuarioService } from './home/novo-usuario/novo-usuario.service';
 import { UsuarioExisteService } from './home/novo-usuario/usuario-existe.service';
+import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
+import { RodapeModule } from './componentes/rodape/rodape.module';
+
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    CabecalhoModule,
+    RodapeModule
+    
   ],
   providers: [
     NovoUsuarioService,
