@@ -2,6 +2,8 @@
 
 <h2> :construction: Projeto em construção :construction: </h2>
 
+![gatito](https://user-images.githubusercontent.com/87622645/158390590-c109376f-b804-4316-9a3e-711340f34abe.png)
+
 ## INDICE
 
 * [Título](#titulo)
