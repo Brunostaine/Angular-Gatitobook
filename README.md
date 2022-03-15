@@ -35,6 +35,11 @@ https://github.com/Brunostaine/Angular-Gatitobook
 **🛠️ Abrir e rodar o projeto**<br>
 https://gatitobook-brunostaine.netlify.app/home
 
+- Faça o clone do projeto e abra no terminal como o comando "ng serve --o"
+- Para abrir a API abra outro terminal e navegue até a pasta que está dentro do projeto chamada "gatitobook-backend", e depois na pasta "api"
+- Quando estiver na pasta api digite o comando "npm start" se estiver logado aparecerá os usuários cadastrados
+- Agora você pode ir para a aplicação e criar seu usuário e fazer o login
+
 ## Tecnologias utilizadas
 * HTML
 * CSS
