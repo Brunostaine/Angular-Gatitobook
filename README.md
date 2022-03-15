@@ -2,7 +2,6 @@
 
 <h2> :construction: Projeto em construção :construction: </h2>
 
-
 ## INDICE
 
 * [Título](#titulo)
@@ -19,13 +18,14 @@
 
 ## Descrição do projeto
 
-- O Gatito book é uma rede social para amantes de gatos
+- O Gatito book é uma rede social para amantes de gatos.
 
 ## :hammer: Funcionalidades do projeto
 
 - `Home`: Imagem e formulário
 - `Login` : Validações de entrada, de usuario, de senha e tratamento de erros
 - `Cadastro` : Componente para cadastro de usuários
+- `API` : Api que armazena os dados de login
 
 ## 📁 Acesso ao projeto
 
@@ -33,7 +33,7 @@
 https://github.com/Brunostaine/Angular-Gatitobook
 
 **🛠️ Abrir e rodar o projeto**<br>
-
+https://gatitobook-brunostaine.netlify.app/home
 
 ## Tecnologias utilizadas
 * HTML
