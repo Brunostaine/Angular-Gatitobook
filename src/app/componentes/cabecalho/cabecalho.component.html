@@ -1,6 +1,6 @@
-<header class="sticky-top container">
-    <nav class="navbar navbar-light bg-white">
-      <a class="navbar-brand">Gatito Book</a>
+<header class="sticky-top">
+    <nav class="navbar navbar-light bg-white ">
+      <a class="navbar-brand container">Gatito Book</a>
       <div *ngIf="user$ | async as user" >
         <div *ngIf="user.name; else login" >
           <i class="fa fa-user-circle mr-1"></i>
