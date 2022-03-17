@@ -17,8 +17,6 @@ export class UsuarioService {
         this.decodificaJWT()
     }
    }
-    
-
     private decodificaJWT() {
       const token = this.tokenService.retornaToken()
       const usuario = jwtDecode(token) as Usuario;
