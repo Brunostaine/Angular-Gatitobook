@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ListaAnimaisComponent,
   },
   {
-    path: 'animalId',
+    path: ':animalId',
     component: DetalheAnimalComponent,
   }
 ];
