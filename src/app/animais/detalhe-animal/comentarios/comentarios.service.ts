@@ -14,11 +14,11 @@ export class ComentariosService {
   constructor(private http: HttpClient) { }
   
   buscaComentario(id: number): Observable<Comentarios> {
-    return this.http.get<Comentarios>(`$(API)/photos/${id}/comments`)
+    return this.http.get<Comentarios>(`${API}/photos/${id}/comments`);
   }
 
-  incluiComentario(id: number, commentText: string): Observable<Comentario> {
-    return this.http.post<Comentario>(`$(API)/photos/${id}/comments`, commentText)
+  incluiComentario(id: number, commentText: string): Observable<Comentario>{
+    return this.http.post<Comentario>(`${API}/photos/${id}/comments`, { commentText });
   }
 
 }
