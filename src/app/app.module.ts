@@ -6,13 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NovoUsuarioService } from './home/novo-usuario/novo-usuario.service';
-import { UsuarioExisteService } from './home/novo-usuario/usuario-existe.service';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 import { RodapeModule } from './componentes/rodape/rodape.module';
-
-
-
-
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +19,8 @@ import { RodapeModule } from './componentes/rodape/rodape.module';
     AppRoutingModule, 
     HttpClientModule,
     CabecalhoModule,
-    RodapeModule
-    
+    RodapeModule,
+    AutenticacaoModule    
   ],
   providers: [
     NovoUsuarioService,
