@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { MensagemModule } from '../componentes/mensagem/mensagem.module';
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,7 @@ import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
     HomeRoutingModule,
     HttpClientModule,
     FormsModule,
-    MensagemModule,
-    ReactiveFormsModule, 
+    SharedModule 
   ],
   exports: [
     HomeComponent
