@@ -9,14 +9,14 @@ const routes: Routes = [
   {
     path: '',
     component: ListaAnimaisComponent,
-    resolve: {
-      animais: ListaAnimaisResolver,
-    }
+    resolve: {animais: ListaAnimaisResolver,}
   },
+
   {
     path: 'novo',
     component: NovoAnimalComponent,
   },
+
   {
     path: ':animalId',
     component: DetalheAnimalComponent,
